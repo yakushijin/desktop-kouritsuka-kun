@@ -1,0 +1,60 @@
+{
+  "name": "desktop_kouritsuka_kun",
+  "version": "0.9.1",
+  "description": "",
+  "main": "desktop/bundle.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "webpack --watch --mode development",
+    "build": "webpack --mode production",
+    "linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.electron.desktop-kouritsuka-kun",
+    "productName": "desktop-kouritsukakun",
+    "files": [
+      "desktop/**/*",
+      "public/**/*"
+    ],
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "maintainer": "yakushijin@yakusys.com",
+      "category": "Network"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yakushijin/electronTest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yakushijin/electronTest/issues"
+  },
+  "homepage": "https://github.com/yakushijin/electronTest#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/styles": "^4.11.3",
+    "nedb": "^1.8.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1",
+    "webpack-cli": "^4.4.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.17.0",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "electron": "^11.2.3",
+    "electron-builder": "^22.9.1",
+    "electron-rebuild": "^2.3.5"
+  }
+}
